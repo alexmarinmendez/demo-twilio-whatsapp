@@ -5,9 +5,9 @@ const client = require('twilio')(accountSid, authToken);
 
 client.messages
       .create({
-         from: 'whatsapp:+14155238886',
-         body: 'Hello there!',
-         to: 'whatsapp:+51942270712'
+        body: 'Your Yummy Cupcakes Company order of 1 dozen frosted cupcakes has shipped and should be delivered on July 10, 2019. Details: http://www.yummycupcakes.com/', 
+        from: 'whatsapp:+14155238886',       
+        to: 'whatsapp:+51942270712' 
        })
       .then(message => console.log(message.sid))
       .catch(err => console.log(err));
